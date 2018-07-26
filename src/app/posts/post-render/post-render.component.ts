@@ -15,7 +15,7 @@ export class PostRenderComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
 
   ngOnInit() {
-    this.posts = this.postService.getPostList();
+    this.postService.getPostList();
     this.postService.postSubjectListener()
       .subscribe((response: Post[]) => {
         this.posts = [...response];

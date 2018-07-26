@@ -17,7 +17,7 @@ export class PostCreateComponent {
       return;
     }
     console.log('post added');
-    const post: Post = {title: postForm.value.title, content: postForm.value.content};
+    const post: Post = {id: null, title: postForm.value.title, content: postForm.value.content};
     this.postService.setPost(post);
   }
 }
